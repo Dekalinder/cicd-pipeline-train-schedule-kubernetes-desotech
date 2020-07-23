@@ -39,7 +39,7 @@ pipeline {
             steps {
                 kubernetesDeploy(
                     kubeconfigId: 'kubeconfig',
-                    configs: 'train-schedule-kube.yml',
+                    configs: 'kubeconfig',
                     enableConfigSubstitution: true
                 )
                     
