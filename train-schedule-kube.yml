@@ -10,13 +10,13 @@ spec:
   - protocol: TCP
     port: 8080
     nodePort: 30100
-    
+
 ---
 
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: train-schedule-deployment
+  name: kirey-deployment
   labels:
     app: train-schedule
 spec:
@@ -31,6 +31,6 @@ spec:
     spec:
       containers:
       - name: train-schedule
-      image: $DOCKER_IMAGE_NAME:$BUILD_NUMBER
-      ports:
-      - containerPort: 8080
+        image: $DOCKER_IMAGE_NAME:$BUILD_NUMBER
+        ports:
+        - containerPort: 8080
