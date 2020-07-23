@@ -37,10 +37,9 @@ pipeline {
         stage('DeployToProduction') {
             
             steps {
-                
                 kubernetesDeploy(
                     kubeconfigId: 'kubeconfig',
-                    configs: 'myapp.yaml',
+                    configs: 'train-schedule-kube.yml',
                     enableConfigSubstitution: true
                 )
                     
